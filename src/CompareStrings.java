@@ -5,6 +5,7 @@ public class CompareStrings {
      * LEARNING POINT: Try upper versus lower case, and see what happens - don't worry about the results though - just notice what they are.)
      * Note the double quote marks in the answers below - they should appear.
      */
+
     public static void main(String[] args) {
         // TODO Read in two strings
 

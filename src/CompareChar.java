@@ -8,6 +8,7 @@ public class CompareChar {
     * LEARNING POINT: Unicode/ASCII characters are in lexicographical order.
     * You never need to use and/or memorize the numerical values of a character.
     * */
+
     public static void main(String[] args) {
         // TODO Prompt the user to enter two chars and read the input as a string using the next() method for the Scanner class
         // TODO Convert the string to a char before comparing the letters
