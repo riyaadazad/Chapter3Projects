@@ -29,10 +29,10 @@ public class HiLow {
      */
     public static void main(String[] args) {
         String str = "Y";
-        while ((str.equals("y")) || (str.equals("Y"))) {
+        /*while ((str.equals("y")) || (str.equals("Y"))) {
             // The game goes here
             System.out.print("Do you wish to play again - Y or N? ");
             str = value.next();
-        }
+        }*/
     }
 }

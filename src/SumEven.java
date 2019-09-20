@@ -11,9 +11,9 @@ public class SumEven {
      * Ensures the user enters a number greater than two.
      * @return a number greater than two.
      */
-    public static int getValidNumber() {
+    /*public static int getValidNumber() {
 
-    }
+    }*/
 
     public static void main(String[] args) {
         // TODO Read an int value

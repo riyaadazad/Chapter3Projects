@@ -22,9 +22,9 @@ public class GPA {
      * @param grade the grade
      * @return the GPA
      */
-    private static double getGPA(String grade) {
+    /*private static double getGPA(String grade) {
 
-    }
+    }*/
 
     public static void main(String[] args) {
         // TODO Calculate the student's Grade Point Average (GPA) and convert it to a numerical values

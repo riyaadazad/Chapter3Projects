@@ -40,9 +40,9 @@ public class Greed {
      * from 1 to 6.
      * @return the value rolled
      */
-    public static int rollDie() {
+    /*public static int rollDie() {
 
-    }
+    }*/
 
     public static void main(String[] args) {
 

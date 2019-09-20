@@ -20,9 +20,9 @@ public class Wages {
      * @param input the filestream to read keyboard input
      * @return the number of hours worked
      */
-    public static int getValidHours(Scanner input) {
+    /*public static int getValidHours(Scanner input) {
 
-    }
+    }*/
 
     public static void main(String[] args) {
         // TODO Prompt the user for the number of hours worked
