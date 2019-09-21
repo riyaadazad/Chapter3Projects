@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CompareStrings {
     /*
      * Write a program that reads in two strings, compares them, and prints out the one that comes first alphabetically (the "smaller" of the the two).
@@ -7,8 +9,25 @@ public class CompareStrings {
      */
 
     public static void main(String[] args) {
-        // TODO Read in two strings
+        // Read in two strings
+        Scanner input = new Scanner(System.in);
 
-        // TODO Compare strings with compareTo method and print out the string that comes first alphabetically
+        System.out.print("Enter a string: ");
+        String firstString = input.next();
+
+        System.out.print("Enter a second string: ");
+        String secondString = input.next();
+
+        // Compare strings with compareTo method and print out the string that comes first alphabetically
+
+        if (firstString.compareTo(secondString) < secondString.compareTo(firstString)) {
+            System.out.println("The smaller value of \"" + firstString + "\" and \"" + secondString + "\" is \"" + firstString + "\".");
+        } else if (secondString.compareTo(firstString) < firstString.compareTo(secondString)) {
+            System.out.println("The smaller value of \"" + firstString + "\" and \"" + secondString + "\" is \"" + secondString + "\".");
+        } else if (firstString.compareTo(secondString) == secondString.compareTo(firstString)) {
+            System.out.println("The values are both \"" + firstString + "\".");
+        } else {
+            System.out.println("OMG Look what you have done to the program!");
+        }
     }
 }
