@@ -25,10 +25,22 @@ public class Wages {
     }*/
 
     public static void main(String[] args) {
-        // TODO Prompt the user for the number of hours worked
-        // TODO Prompt the user for wages
-        // TODO Calculate the amount the user should be paid
-        // TODO Include overtime (time and a half - 1.5 times their normal salary)
+        Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
+
+        System.out.print("Enter the number of hours worked this week: ");
+        Double hoursWorked = input.nextDouble();
+
+        System.out.print("Enter your hourly wage: "); // Prompt the user for wages
+        Double hourlyWage = input.nextDouble();
+
+        Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
+
+        if (payCheck > 40.0) { // TODO Include overtime (time and a half - 1.5 times their normal salary)
+            Double overtimePay = payCheck - 40.0; // Take way the 40
+            overtimePay = overtimePay * 1.5;
+            overtimePay = overtimePay + 40.0;
+            payCheck = overtimePay;
+        }
         // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
         // TODO Use DecimalFormat or NumberFormat when displaying the output for the salary
     }
