@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class LeapYear {
     /*
      * Design and implement an application that reads an integer value representing a year input by the user.
@@ -17,8 +19,18 @@ public class LeapYear {
      */
 
     public static void main(String[] args) {
-        // TODO Read an integer value representing a year input
-        // TODO Determine if the year is a leap year in the Gregorian calendar
-        // TODO Produce an error message if the year input is less than 1582
+        // Read an integer value representing a year input
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a year: ");
+        int yearInput = input.nextInt();
+
+        // Determine if the year is a leap year in the Gregorian calendar
+        if (yearInput < 1582) { // Produce an error message if the year input is less than 1582
+            System.out.println("What are you doing? Are you crazy?? 1582 was the first year of the Gregorian calendar. Seriously, enter a number less than 1582. You're making my job harder. Okay, try again.");
+        } else if (yearInput % 4 == 0 && yearInput % 100 != 0 || yearInput % 400 == 0) { // https://www.tutorialspoint.com/Check-if-a-large-number-is-divisible-by-3-or-not-in-java
+            System.out.println("The year " + yearInput + " is a leap year, which means February had 29 days in that year.");
+        } else {
+            System.out.println("Sorry, but " + yearInput + " is not a leap year.");
+        }
     }
 }
