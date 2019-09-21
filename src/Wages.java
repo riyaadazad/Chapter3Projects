@@ -16,21 +16,20 @@ public class Wages {
      * Testing: Check values less than 0, 0, 1 - 39, 40, 41, 41 - 168, and values greater than 168.
      */
 
-    public static void main(String[] args) {
-        // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
-        /**
-         * Ensures the number of hours worked is between 0 and 168
-         * @param input the filestream to read keyboard input
-         * @return the number of hours worked
-         */
-        public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
-            Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
+    // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+    /**
+     * Ensures the number of hours worked is between 0 and 168
+     * @param input the filestream to read keyboard input
+     * @return the number of hours worked
+     */
+    public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
+        Scanner output = new Scanner(System.in); // Prompt the user for the number of hours worked
+        System.out.print("Enter the number of hours worked this week: ");
+        int hoursWorked = output.nextInt();
+        return hoursWorked;
+    }
 
-            System.out.print("Enter the number of hours worked this week: ");
-            Double hoursWorked = input.nextDouble();
-
-
-        }
+    public static int main(String[] args) {
 
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
