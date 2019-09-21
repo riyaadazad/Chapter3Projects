@@ -42,7 +42,7 @@ public class Wages {
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
         Double hourlyWage = input.nextDouble();
 
-        Double hoursWorked = getValidHours(Scanner input);
+        Double hoursWorked = getValidHours(Scanner input); // https://www.codesdope.com/java-get-values-from-method/
 
         Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
 
