@@ -1,3 +1,5 @@
+import java.text.NumberFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Wages {
@@ -14,34 +16,36 @@ public class Wages {
      * Testing: Check values less than 0, 0, 1 - 39, 40, 41, 41 - 168, and values greater than 168.
      */
 
-     // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
-     /**
-     * Ensures the number of hours worked is between 0 and 168
-     * @param input the filestream to read keyboard input
-     * @return the number of hours worked
-     */
-    /*public static int getValidHours(Scanner input) {
-
-    }*/
-
     public static void main(String[] args) {
+        // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+        /**
+         * Ensures the number of hours worked is between 0 and 168
+         * @param input the filestream to read keyboard input
+         * @return the number of hours worked
+         */
+        public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
+            Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
+
+            System.out.print("Enter the number of hours worked this week: ");
+            Double hoursWorked = input.nextDouble();
+
+
+        }
+
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
-
-        System.out.print("Enter the number of hours worked this week: ");
-        Double hoursWorked = input.nextDouble();
-
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
         Double hourlyWage = input.nextDouble();
 
         Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
 
-        if (payCheck > 40.0) { // TODO Include overtime (time and a half - 1.5 times their normal salary)
-            Double overtimePay = payCheck - 40.0; // Take way the 40
-            overtimePay = overtimePay * 1.5;
-            overtimePay = overtimePay + 40.0;
-            payCheck = overtimePay;
+        if (hoursWorked > 40.0) { // Include overtime (time and a half - 1.5 times their normal salary)
+            Double nonOvertimeHours = 40.0 * hourlyWage; // Calculate how much money is not overtime
+            Double overtimePay = payCheck - nonOvertimeHours; // Subtract money that is not overtime from payCheck
+            overtimePay = overtimePay * 1.5; // Calculate overtimePay
+            payCheck = overtimePay + nonOvertimeHours; // Add nonOvertimeHours to the final total after calculating overtimePay
         }
-        // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
-        // TODO Use DecimalFormat or NumberFormat when displaying the output for the salary
+
+        NumberFormat formatToNumber = NumberFormat.getInstance(Locale.US); // Use DecimalFormat or NumberFormat when displaying the output for the salary
+        System.out.println("You made " + "$" + formatToNumber.format(payCheck) + " this week."); // https://www.geeksforgeeks.org/numberformat-class-java/
     }
 }
