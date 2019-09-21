@@ -17,8 +17,10 @@ public class Wages {
      */
 
     // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+
     /**
      * Ensures the number of hours worked is between 0 and 168
+     *
      * @param input the filestream to read keyboard input
      * @return the number of hours worked
      */
