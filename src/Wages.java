@@ -16,26 +16,33 @@ public class Wages {
      * Testing: Check values less than 0, 0, 1 - 39, 40, 41, 41 - 168, and values greater than 168.
      */
 
-    // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
-
-    /**
-     * Ensures the number of hours worked is between 0 and 168
-     *
-     * @param input the filestream to read keyboard input
-     * @return the number of hours worked
-     */
-    public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
-        Scanner output = new Scanner(System.in); // Prompt the user for the number of hours worked
-        System.out.print("Enter the number of hours worked this week: ");
-        int hoursWorked = output.nextInt();
-        return hoursWorked;
-    }
-
     public static int main(String[] args) {
+        // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+
+        /**
+         * Ensures the number of hours worked is between 0 and 168
+         *
+         * @param input the filestream to read keyboard input
+         * @return the number of hours worked
+         */
+        public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
+
+            int i = 0; // https://www.w3schools.com/java/java_while_loop.asp
+
+            while (i < 1) {
+                Scanner output = new Scanner(System.in); // Prompt the user for the number of hours worked
+                System.out.print("Enter the number of hours worked this week: ");
+                int hoursWorked = output.nextInt();
+                return hoursWorked;
+                i++;
+            }
+        }
 
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
         Double hourlyWage = input.nextDouble();
+
+        Double hoursWorked = getValidHours(Scanner input);
 
         Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
 
