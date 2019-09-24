@@ -15,9 +15,8 @@ public class Wages {
      * Create a method called getValidHours to ensure the user enters a number in the correct range and returns the number of hours worked.
      * Testing: Check values less than 0, 0, 1 - 39, 40, 41, 41 - 168, and values greater than 168.
      */
-    private static Scanner input;
 
-    // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+    // Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
 
     /**
      * Ensures the number of hours worked is between 0 and 168
@@ -34,12 +33,13 @@ public class Wages {
         }
         return hoursWorked;
     }
+
     public static int main(String[] args) {
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
         Double hourlyWage = input.nextDouble();
 
-        Double hoursWorked = getValidHours(Scanner input); // https://www.codesdope.com/java-get-values-from-method/
+        Double hoursWorked = getValidHours();
 
         Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
 
