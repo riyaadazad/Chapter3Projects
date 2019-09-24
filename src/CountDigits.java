@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CountDigits {
     /*
      * Design and implement an application that determines and prints the number of even, odd, and zero digits in an int value read from the keyboard.
@@ -9,6 +11,24 @@ public class CountDigits {
      */
 
     public static void main(String[] args) {
+        int userInput = 0;
+        String userChars = "0";
+        String zeroDigits = "0";
+        String evenDigits = "0";
+        String oddDigits = "0";
+        char[] userDigits = userChars.toCharArray();
+
         // TODO Use a while loop to print the number of even, odd, and zero digits in an int value
+        while (true) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter a number: ");
+            userInput = input.nextInt();
+
+            userChars = userChars.valueOf(userInput);
+
+            System.out.println(userChars);
+
+            System.out.println("The number " + userInput + " has " + zeroDigits + " zeroes, " + evenDigits + " even digits, and " + oddDigits + " odd digits.");
+        }
     }
 }
