@@ -10,22 +10,41 @@ public class SwitchWeek {
      */
 
     public static void main(String[] args) {
-        // Let the user know that they can type "0" at any time to quit
-        System.out.println("Type 0 at anytime to quit.");
         int numberInput = 0;
+        String dayOfWeek = "";
 
-        // TODO Read an integer and print out the corresponding day of the week
+        // Read an integer using a do-while loop to continually read input.
         do {
             Scanner input = new Scanner(System.in);
+
             System.out.print("Enter a number from 1 - 7. Enter 0 to quit. --> ");
+
             numberInput = input.nextInt();
+
+            // Use a switch statement to convert the number into the day of the week
+            switch (numberInput) { // https://www.w3schools.com/js/js_switch.asp
+                case 1:
+                case 7: // Put both cases together that print "Weekend!!!" If it is a weekend print "Weekend!!!"
+                    System.out.println("Weekend!!!");
+                    break;
+                case 2:
+                    System.out.println("Monday");
+                    break;
+                case 3:
+                    System.out.println("Tuesday");
+                    break;
+                case 4:
+                    System.out.println("Wednesday");
+                    break;
+                case 5:
+                    System.out.println("Thursday");
+                    break;
+                case 6:
+                    System.out.println("Friday");
+                    break;
+            }
+
+            System.out.println(dayOfWeek); // Print out the corresponding day of the week.
         } while (numberInput != 0);
-
-        // TODO Use a switch statement to convert the number into the day of the week
-            // TODO Put both cases together that print "Weekend!!!"
-
-        // TODO If it is a weekend print "Weekend!!!"
-
-        // TODO Use a do-while loop to continually reading input
     }
 }
