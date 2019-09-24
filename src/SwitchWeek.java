@@ -16,9 +16,7 @@ public class SwitchWeek {
         // Read an integer using a do-while loop to continually read input.
         do {
             Scanner input = new Scanner(System.in);
-
             System.out.print("Enter a number from 1 - 7. Enter 0 to quit. --> ");
-
             numberInput = input.nextInt();
 
             // Use a switch statement to convert the number into the day of the week
@@ -42,9 +40,9 @@ public class SwitchWeek {
                 case 6:
                     System.out.println("Friday");
                     break;
+                default:
+                    System.out.println("What have you done!???! Enter a number between 0 and 7. 0,1,2,3,4,5,6,7");
             }
-
-            System.out.println(dayOfWeek); // Print out the corresponding day of the week.
         } while (numberInput != 0);
     }
 }
