@@ -29,17 +29,16 @@ public class Wages {
         while (hoursWorked > 168 || hoursWorked < 0) {
             System.out.print("Enter the number of hours worked this week: ");
             hoursWorked = input.nextInt();
-            System.out.println("You have entered an invalid range of hours worked. You may not work over 168 hours or under 0 hours in a week.");
         }
         return hoursWorked;
     }
 
-    public static int main(String[] args) {
+    public static void main(String[] args) {
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
         System.out.print("Enter your hourly wage: "); // Prompt the user for wages
         Double hourlyWage = input.nextDouble();
 
-        Double hoursWorked = getValidHours();
+        Double hoursWorked = (double) getValidHours(input);
 
         Double payCheck = hoursWorked * hourlyWage; // Calculate the amount the user should be paid
 
