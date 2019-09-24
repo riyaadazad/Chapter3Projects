@@ -18,27 +18,21 @@ public class Wages {
     private static Scanner input;
 
     // TODO Use a while loop to check that a person does not work over 168 hours or under 0 hours BEFORE a value for wage is entered
+
     /**
      * Ensures the number of hours worked is between 0 and 168
+     *
      * @param input the filestream to read keyboard input
      * @return the number of hours worked
      */
     public static int getValidHours(Scanner input) { // Create a method getValidHours to ensure that the user enters a number in the correct range and returns the number of hours worked:
-
-        int i = 0; // https://www.w3schools.com/java/java_while_loop.asp
-
-        while (i < 5) {
-            Scanner scanInput = new Scanner(System.in); // Prompt the user for the number of hours worked
+        int hoursWorked = -7;
+        while (hoursWorked > 168 || hoursWorked < 0) {
             System.out.print("Enter the number of hours worked this week: ");
-            int hoursWorked = scanInput.nextInt();
-
-            if (hoursWorked > 168 || hoursWorked < 0) {
-                System.out.println("You have entered an invalid range of hours worked. You may not work over 168 hours or under 0 hours in a week.");
-                i++;
-            } else {
-                return hoursWorked;
-            }
+            hoursWorked = input.nextInt();
+            System.out.println("You have entered an invalid range of hours worked. You may not work over 168 hours or under 0 hours in a week.");
         }
+        return hoursWorked;
     }
     public static int main(String[] args) {
         Scanner input = new Scanner(System.in); // Prompt the user for the number of hours worked
