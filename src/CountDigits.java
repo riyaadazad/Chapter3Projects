@@ -21,22 +21,36 @@ public class CountDigits {
 
         String userInputString = String.valueOf(userInput);
 
-        while (userInput < 0) { // Use a while loop to print the number of even, odd, and zero digits in an int value
-            int i = i % 10;
+        while (userInput > 0) { // Use a while loop to print the number of even, odd, and zero digits in an int value
+            int i = userInput % 10;
             switch (i) {
                 case 0:
                     zeroDigits++;
                     break;
                 case 1:
+                    oddDigits++;
+                    break;
                 case 3:
+                    oddDigits++;
+                    break;
                 case 5:
+                    oddDigits++;
+                    break;
                 case 7:
+                    oddDigits++;
+                    break;
                 case 9:
                     oddDigits++;
                     break;
                 case 2:
+                    evenDigits++;
+                    break;
                 case 4:
+                    evenDigits++;
+                    break;
                 case 6:
+                    evenDigits++;
+                    break;
                 case 8:
                     evenDigits++;
                     break;
