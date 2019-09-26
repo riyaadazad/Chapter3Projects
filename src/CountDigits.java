@@ -22,44 +22,26 @@ public class CountDigits {
         String userInputString = String.valueOf(userInput);
 
         int i = 0;
-        while (i < userInput) { // TODO Use a while loop to print the number of even, odd, and zero digits in an int value
+        while (i < userInput) { // Use a while loop to print the number of even, odd, and zero digits in an int value
             if (userInputString.contains("0")) {
                 zeroDigits = zeroDigits + 1;
-            }
-
-            if (userInputString.contains("1")) {
+            } else if (userInputString.contains("1")) {
                 oddDigits = oddDigits + 1;
-            }
-
-            if (userInputString.contains("2")) {
+            } else if (userInputString.contains("2")) {
                 evenDigits = evenDigits +1;
-            }
-
-            if (userInputString.contains("3")) {
+            } else if (userInputString.contains("3")) {
                 oddDigits = oddDigits + 1;
-            }
-
-            if (userInputString.contains("4")) {
+            } else if (userInputString.contains("4")) {
                 evenDigits = evenDigits +1;
-            }
-
-            if (userInputString.contains("5")) {
+            } else if (userInputString.contains("5")) {
                 oddDigits = oddDigits + 1;
-            }
-
-            if (userInputString.contains("6")) {
+            } else if (userInputString.contains("6")) {
                 evenDigits = evenDigits +1;
-            }
-
-            if (userInputString.contains("7")) {
+            } else if (userInputString.contains("7")) {
                 oddDigits = oddDigits + 1;
-            }
-
-            if (userInputString.contains("8")) {
+            } else if (userInputString.contains("8")) {
                 evenDigits = evenDigits +1;
-            }
-
-            if (userInputString.contains("9")) {
+            } else if (userInputString.contains("9")) {
                 oddDigits = oddDigits + 1;
             }
 
