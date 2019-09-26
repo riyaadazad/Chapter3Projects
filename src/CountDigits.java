@@ -21,31 +21,27 @@ public class CountDigits {
 
         String userInputString = String.valueOf(userInput);
 
-        int i = 0;
-        while (i < userInput) { // Use a while loop to print the number of even, odd, and zero digits in an int value
-            if (userInputString.contains("0")) {
-                zeroDigits = zeroDigits + 1;
-            } else if (userInputString.contains("1")) {
-                oddDigits = oddDigits + 1;
-            } else if (userInputString.contains("2")) {
-                evenDigits = evenDigits +1;
-            } else if (userInputString.contains("3")) {
-                oddDigits = oddDigits + 1;
-            } else if (userInputString.contains("4")) {
-                evenDigits = evenDigits +1;
-            } else if (userInputString.contains("5")) {
-                oddDigits = oddDigits + 1;
-            } else if (userInputString.contains("6")) {
-                evenDigits = evenDigits +1;
-            } else if (userInputString.contains("7")) {
-                oddDigits = oddDigits + 1;
-            } else if (userInputString.contains("8")) {
-                evenDigits = evenDigits +1;
-            } else if (userInputString.contains("9")) {
-                oddDigits = oddDigits + 1;
+        while (userInput < 0) { // Use a while loop to print the number of even, odd, and zero digits in an int value
+            int i = i % 10;
+            switch (i) {
+                case 0:
+                    zeroDigits++;
+                    break;
+                case 1:
+                case 3:
+                case 5:
+                case 7:
+                case 9:
+                    oddDigits++;
+                    break;
+                case 2:
+                case 4:
+                case 6:
+                case 8:
+                    evenDigits++;
+                    break;
             }
-
-            i++;
+            userInput /= 10;
         }
 
         System.out.println("The number " + userInput + " has " + zeroDigits + " zeroes, " + evenDigits + " even digits, and " + oddDigits + " odd digits.");
