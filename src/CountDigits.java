@@ -11,15 +11,32 @@ public class CountDigits {
      */
 
     public static void main(String[] args) {
-        int userInput = 0;
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a number: ");
+        int userInput = input.nextInt();
+
+        int zeroDigits = 0;
+        int evenDigits = 0;
+        int oddDigits = 0;
+
+        char[] chars = ("" + userInput).toCharArray();
+
+        int i = 0;
+        while (i < userInput) { // TODO Use a while loop to print the number of even, odd, and zero digits in an int value
+
+            i++;
+        }
+
+        System.out.println("The number " + userInput + " has " + zeroDigits + " zeroes, " + evenDigits + " even digits, and " + oddDigits + " odd digits.");
+
+        /* int userInput = 0;
         String userChars = "0";
         String zeroDigits = "0";
         String evenDigits = "0";
         String oddDigits = "0";
         char[] userDigits = userChars.toCharArray();
 
-        // TODO Use a while loop to print the number of even, odd, and zero digits in an int value
-        while (true) {
+        while () {
             Scanner input = new Scanner(System.in);
             System.out.print("Enter a number: ");
             userInput = input.nextInt();
@@ -29,6 +46,6 @@ public class CountDigits {
             System.out.println(userChars);
 
             System.out.println("The number " + userInput + " has " + zeroDigits + " zeroes, " + evenDigits + " even digits, and " + oddDigits + " odd digits.");
-        }
+        }*/
     }
 }
