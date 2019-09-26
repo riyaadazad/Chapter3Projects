@@ -21,6 +21,8 @@ public class SwitchWeek {
 
             // Use a switch statement to convert the number into the day of the week
             switch (numberInput) { // https://www.w3schools.com/js/js_switch.asp
+                case 0:
+                    break;
                 case 1:
                 case 7: // Put both cases together that print "Weekend!!!" If it is a weekend print "Weekend!!!"
                     System.out.println("Weekend!!!");
