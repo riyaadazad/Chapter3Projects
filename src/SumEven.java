@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SumEven {
     /*
      * Design and implement an application that reads an integer value and prints the sum of all even integers between 2 and the input value, inclusive.
@@ -11,13 +13,28 @@ public class SumEven {
      * Ensures the user enters a number greater than two.
      * @return a number greater than two.
      */
-    /*public static int getValidNumber() {
+    public static int getValidNumber() {
 
-    }*/
+    }
 
     public static void main(String[] args) {
-        // TODO Read an int value
-        // TODO Use a do-while loop to print the sum of all even ints between 2 and the inclusive input value
-        // TODO Use a for loop to find the sum
+        int userInt = 2;
+
+        // Use a do-while loop to print the sum of all even ints between 2 and the inclusive input value
+        do {
+            // Read an int value
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter a number greater than 2: ");
+            userInt = input.nextInt();
+
+            // TODO Use a for loop to find the sum
+            for (int i = 0; i >= userInt; i++) {
+
+            }
+
+            int sumEven = userInt;
+
+            System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
+        } while (userInt >= 2);
     }
 }
