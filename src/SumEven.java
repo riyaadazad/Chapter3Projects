@@ -13,28 +13,29 @@ public class SumEven {
      * Ensures the user enters a number greater than two.
      * @return a number greater than two.
      */
-    public static int getValidNumber() {
+    public static int getValidNumber(Scanner input) {
         int userInt = 2;
 
-        // Read an int value
-        Scanner input = new Scanner(System.in);
-        System.out.print("Enter a number greater than 2: ");
-        userInt = input.nextInt();
+        // Use a do-while loop to print the sum of all even ints between 2 and the inclusive input value
+        do {
+            // Read an int value
+            System.out.print("Enter a number greater than 2: ");
+            userInt = input.nextInt();
 
-        return userInt;
+            return userInt;
+        } while (userInt >= 2);
     }
 
     public static void main(String[] args) {
-        // Use a do-while loop to print the sum of all even ints between 2 and the inclusive input value
-        do {
-            // TODO Use a for loop to find the sum
-            for (int i = 0; i >= userInt; i++) {
+        int userInt = getValidNumber(input);
 
-            }
+        // TODO Use a for loop to find the sum
+        for (int i = 0; i >= userInt; i++) {
 
-            int sumEven = userInt;
+        }
 
-            System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
-        } while (userInt >= 2);
+        int sumEven = userInt;
+
+        System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
     }
 }
