@@ -21,7 +21,7 @@ public class SumEven {
             // Read an int value
             System.out.print("Enter a number greater than 2: ");
             userInt = input.nextInt();
-        } while (userInt >= 2);
+        } while (userInt < 2);
 
         return userInt;
     }
@@ -33,9 +33,11 @@ public class SumEven {
 
         int sumEven = 0;
 
-        // TODO Use a for loop to find the sum
+        // Use a for loop to find the sum
         for (int i = 0; i >= userInt; i++) {
-
+            if (i % 2 == 0){
+                sumEven = sumEven + 1;
+            }
         }
 
         System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
