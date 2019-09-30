@@ -35,42 +35,10 @@ public class SumEven {
         int sumEven = 0;
 
         // Use a for loop to find the sum
-        for (int i = 0; i >= userInt; i++) {
-            int a = userInt % 2;
-            switch (a) {
-                case 0:
-                    sumEven++;
-                    break;
-                case 1:
-                    sumEven++;
-                    break;
-                case 3:
-                    sumEven++;
-                    break;
-                case 5:
-                    sumEven++;
-                    break;
-                case 7:
-                    sumEven++;
-                    break;
-                case 9:
-                    sumEven++;
-                    break;
-                case 2:
-                    sumEven++;
-                    break;
-                case 4:
-                    sumEven++;
-                    break;
-                case 6:
-                    sumEven++;
-                    break;
-                case 8:
-                    sumEven++;
-                    break;
-            }
-
-            System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
+        for (int i = 0; i <= userInt; i+= 2) {
+            sumEven+= i;
         }
+
+        System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
     }
 }
