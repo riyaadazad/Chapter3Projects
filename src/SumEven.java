@@ -11,6 +11,7 @@ public class SumEven {
 
     /**
      * Ensures the user enters a number greater than two.
+     *
      * @return a number greater than two.
      */
     public static int getValidNumber(Scanner input) {
@@ -35,11 +36,41 @@ public class SumEven {
 
         // Use a for loop to find the sum
         for (int i = 0; i >= userInt; i++) {
-            if (i % 2 == 0){
-                sumEven = sumEven + 1;
+            int a = userInt % 2;
+            switch (a) {
+                case 0:
+                    sumEven++;
+                    break;
+                case 1:
+                    sumEven++;
+                    break;
+                case 3:
+                    sumEven++;
+                    break;
+                case 5:
+                    sumEven++;
+                    break;
+                case 7:
+                    sumEven++;
+                    break;
+                case 9:
+                    sumEven++;
+                    break;
+                case 2:
+                    sumEven++;
+                    break;
+                case 4:
+                    sumEven++;
+                    break;
+                case 6:
+                    sumEven++;
+                    break;
+                case 8:
+                    sumEven++;
+                    break;
             }
-        }
 
-        System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
+            System.out.println("The sum of the even numbers through " + userInt + " is " + sumEven);
+        }
     }
 }
