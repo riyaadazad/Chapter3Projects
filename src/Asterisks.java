@@ -25,69 +25,15 @@ public class Asterisks {
     public static void main(String[] args) {
         // Part A
         System.out.println("Part A:");
-        for (int i = 1; i <= 1; i++) {
-            System.out.println("*");
-            for (i = 1; i <= 1; i++) {
-                System.out.println("**");
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
             }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("***");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("****");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*****");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("******");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*******");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("********");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*********");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("**********");
-            }
+            System.out.println();
         }
 
         // TODO Part B
         System.out.println("Part B:");
-        for (int i = 1; i <= 1; i++) {
-            System.out.println("**********");
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*********");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("********");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*******");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("******");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*****");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("****");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("***");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("**");
-            }
-            for (i = 1; i <= 1; i++) {
-                System.out.println("*");
-            }
-        }
 
         // TODO Part C
         System.out.println("Part C:");
