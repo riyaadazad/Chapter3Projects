@@ -41,12 +41,16 @@ public class Asterisks {
             System.out.println();
         }
 
-        // TODO Part C
+        // Part C
         System.out.println("Part C:");
         for (int i = 1; i <= 10; i++) {
             for (int j = 10; j >= i; j--) {
-                System.out.print("#");
+                System.out.print(" ");
             }
+            // Hint Below (It might help you to generate the below first, then generate the above)
+            /* for (int j = 9; j >= i; j--) {
+                System.out.print("#");
+            }*/
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
