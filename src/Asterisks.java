@@ -23,6 +23,23 @@ public class Asterisks {
      */
 
     public static void main(String[] args) {
-
+        for (int i = 0; i <= 10; i++) {
+            System.out.println("*");
+            for (i = 1; i <= 9; i++) {
+                System.out.println("**");
+            }
+            for (i = 2; i <= 8; i++) {
+                System.out.println("***");
+            }
+            for (i = 3; i <= 7; i++) {
+                System.out.println("****");
+            }
+            for (i = 4; i <= 6; i++) {
+                System.out.println("*****");
+            }
+            for (i = 5; i <= 5; i++) {
+                System.out.println("******");
+            }
+        }
     }
 }
