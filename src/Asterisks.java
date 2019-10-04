@@ -32,10 +32,10 @@ public class Asterisks {
             System.out.println();
         }
 
-        // TODO Part B
+        // Part B
         System.out.println("Part B:");
         for (int i = 1; i <= 10; i++) {
-            for (int j = 1; j <= i; j++) {
+            for (int j = 10; j >= i; j--) {
                 System.out.print("*");
             }
             System.out.println();
