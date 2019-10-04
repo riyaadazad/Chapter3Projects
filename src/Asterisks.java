@@ -24,6 +24,7 @@ public class Asterisks {
 
     public static void main(String[] args) {
         // Part A
+        System.out.println("Part A:");
         for (int i = 1; i <= 1; i++) {
             System.out.println("*");
             for (i = 1; i <= 1; i++) {
@@ -56,11 +57,16 @@ public class Asterisks {
         }
 
         // TODO Part B
+        System.out.println("Part B:");
 
         // TODO Part C
+        System.out.println("Part C:");
 
         // TODO Part D
+        System.out.println("Part D:");
 
         // TODO Part E
+        System.out.println("Part E:");
+
     }
 }
