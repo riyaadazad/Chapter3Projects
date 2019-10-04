@@ -23,15 +23,12 @@ public class Asterisks {
      */
 
     public static void main(String[] args) {
-        String asterisk = "*";
-        int numAsterisks = 0;
-
         // TODO Part A
+        for (int i = 1; i <= 10; i++) {
+
+        }
 
         // TODO Part B
-        for (numAsterisks = 10; numAsterisks >= 0; numAsterisks--) {
-            System.out.println(asterisk + asterisk + asterisk + asterisk + asterisk + asterisk + asterisk + asterisk + asterisk + asterisk);
-        }
 
         // TODO Part C
 
