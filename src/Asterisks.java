@@ -58,6 +58,36 @@ public class Asterisks {
 
         // TODO Part B
         System.out.println("Part B:");
+        for (int i = 1; i <= 1; i++) {
+            System.out.println("**********");
+            for (i = 1; i <= 1; i++) {
+                System.out.println("*********");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("********");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("*******");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("******");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("*****");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("****");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("***");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("**");
+            }
+            for (i = 1; i <= 1; i++) {
+                System.out.println("*");
+            }
+        }
 
         // TODO Part C
         System.out.println("Part C:");
