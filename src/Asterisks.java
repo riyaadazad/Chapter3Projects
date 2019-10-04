@@ -43,6 +43,12 @@ public class Asterisks {
 
         // TODO Part C
         System.out.println("Part C:");
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("         *");
+            }
+            System.out.println();
+        }
 
         // TODO Part D
         System.out.println("Part D:");
