@@ -81,6 +81,18 @@ public class Asterisks {
             for (int j = 1; j <= i; j++) {
                 System.out.print("*");
             }
+
+            System.out.println();
+
+            for (int j = 1; j <= i; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 7; j >= i; j--) {
+                System.out.print("*");
+            }
+            for (int j = 10; j >= i; j--) {
+                System.out.print("*");
+            }
             System.out.println();
         }
     }
