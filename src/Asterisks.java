@@ -57,7 +57,7 @@ public class Asterisks {
             System.out.println();
         }
 
-        // TODO Part D
+        // Part D
         System.out.println("Part D:");
         for (int i = 1; i <= 10; i++) {
             for (int j = 1; j <= i; j++) {
@@ -71,6 +71,17 @@ public class Asterisks {
 
         // TODO Part E
         System.out.println("Part E:");
-
+        for (int i = 1; i <= 7; i++) {
+            for (int j = 7; j >= i; j--) {
+                System.out.print(" ");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
     }
 }
