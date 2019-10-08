@@ -37,24 +37,21 @@ public class CountVowels {
         int spacesCount = 0; // Create a counter for spaces
         int otherCharacterCount = 0; // Create a counter for other characters
 
-        // TODO Create a loop that strips off one character at a time
+        // Create a loop that strips off one character at a time
         for (int i = 0; i >= userPhraseLength; i++) {
-            if (userPhrase.charAt(i) = "a") {
+            if (userPhrase.charAt(i) = "a") { // TODO Inside the loop, check each character to see if it is a vowel, consonant, space, or other character and increment the appropriate counter
                 aCount++;
             }
         }
 
-        // TODO Inside the loop, check each character to see if it is a vowel, consonant, space, or other character and increment the appropriate counter
-
-
-        // TODO Print how many vowels, consonants, spaces, and other characters each appear in the string
-        System.out.println("The number of 'a': ");
-        System.out.println("The number of 'e': ");
-        System.out.println("The number of 'i': ");
-        System.out.println("The number of 'o': ");
-        System.out.println("The number of 'u': ");
-        System.out.println("The number of consonants: ");
-        System.out.println("The number of spaces: ");
-        System.out.println("The number of other characters: ");
+        // Print how many vowels, consonants, spaces, and other characters each appear in the string
+        System.out.println("The number of 'a': " + aCount);
+        System.out.println("The number of 'e': " + eCount);
+        System.out.println("The number of 'i': " + iCount);
+        System.out.println("The number of 'o': " + oCount);
+        System.out.println("The number of 'u': " + uCount);
+        System.out.println("The number of consonants: " + consonantCount);
+        System.out.println("The number of spaces: " + spacesCount);
+        System.out.println("The number of other characters: " + otherCharacterCount);
     }
 }
