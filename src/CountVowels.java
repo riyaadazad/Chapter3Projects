@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class CountVowels {
     /*
      * Your goal is to design and implement an application that reads a string from the user and then determines and prints how many vowels (a,e,i,o,u), consonants, spaces, and "other characters" appear in the entire string.
@@ -16,23 +18,43 @@ public class CountVowels {
      */
 
     public static void main(String[] args) {
-        // TODO Use nextLine() method to read a string from the user
-        // TODO Convert string to lowercase and determine its length
+        // Use nextLine() method to read a string from the user
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a phrase: ");
+        String userPhrase = input.next();
+
+        // Convert string to lowercase and determine its length
+        userPhrase = userPhrase.toLowerCase();
+        int userPhraseLength = userPhrase.length();
+
+        int aCount = 0; // Create a counter for each vowel
+        int eCount = 0;
+        int iCount = 0;
+        int oCount = 0;
+        int uCount = 0;
+
+        int consonantCount = 0; // Create a counter for consonants
+        int spacesCount = 0; // Create a counter for spaces
+        int otherCharacterCount = 0; // Create a counter for other characters
+
         // TODO Create a loop that strips off one character at a time
-        // TODO Create a counter for each vowel
-        // TODO Create a counter for consonants
-        // TODO Create a counter for spaces
-        // TODO Create a counter for other characters
-        // TODO Initialize them all to zero outside of the loop
+        for (int i = 0; i >= userPhraseLength; i++) {
+            if (userPhrase.charAt(i) = "a") {
+                aCount++;
+            }
+        }
+
         // TODO Inside the loop, check each character to see if it is a vowel, consonant, space, or other character and increment the appropriate counter
+
+
         // TODO Print how many vowels, consonants, spaces, and other characters each appear in the string
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        System.out.println("The number of 'a': ");
+        System.out.println("The number of 'e': ");
+        System.out.println("The number of 'i': ");
+        System.out.println("The number of 'o': ");
+        System.out.println("The number of 'u': ");
+        System.out.println("The number of consonants: ");
+        System.out.println("The number of spaces: ");
+        System.out.println("The number of other characters: ");
     }
 }
