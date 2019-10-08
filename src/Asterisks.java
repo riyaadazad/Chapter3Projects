@@ -71,8 +71,8 @@ public class Asterisks {
 
         // TODO Part E
         System.out.println("Part E:");
-        for (int i = 1; i <= 10; i++) {
-            for (int j = 10; j >= i; j--) {
+        for (int i = 1; i <= 6; i++) {
+            for (int j = 6; j >= i; j--) {
                 System.out.print(" ");
             }
             for (int j = 1; j <= i; j++) {
@@ -80,11 +80,11 @@ public class Asterisks {
             }
             System.out.println();
         }
-        for (int i = 1; i <= 10; i++) {
+        for (int i = 1; i <= 6; i++) {
             for (int j = 1; j <= i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 10; j >= i; j--) {
+            for (int j = 6; j >= i; j--) {
                 System.out.print("*");
             }
             System.out.println();
