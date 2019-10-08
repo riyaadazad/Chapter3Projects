@@ -39,110 +39,51 @@ public class CountVowels {
 
         // Create a loop that strips off one character at a time
         for (int i = 0; i < userPhraseLength; i++) {
-            if (userPhrase.charAt(i) == 'a') { // Inside the loop, check each character to see if it is a vowel, consonant, space, or other character and increment the appropriate counter
-                aCount++;
-            } else if (userPhrase.charAt(i) == 'e') {
-                eCount++;
-            } else if (userPhrase.charAt(i) == 'i') {
-                iCount++;
-            } else if (userPhrase.charAt(i) == 'o') {
-                oCount++;
-            } else if (userPhrase.charAt(i) == 'u') {
-                uCount++;
-            } else if (userPhrase.charAt(i) == 'b') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'c') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'd') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'f') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'g') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'h') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'j') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'k') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'l') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'm') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'n') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'p') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'q') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'r') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 's') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 't') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'v') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'w') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'x') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'y') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == 'z') {
-                consonantCount++;
-            } else if (userPhrase.charAt(i) == ' ') {
-                spacesCount++;
-            } else if (userPhrase.charAt(i) == '!') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '@') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '#') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '$') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '%') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '^') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '&') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '*') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '(') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == ')') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '-') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '+') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '=') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '[') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == ']') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '{') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '}') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '\\') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '|') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == ',') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '.') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '/') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '<') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '>') {
-                otherCharacterCount++;
-            } else if (userPhrase.charAt(i) == '?') {
-                otherCharacterCount++;
+            switch (userPhrase.charAt(i)) {
+                case 'a' :
+                    aCount++;
+                    break;
+                case 'e' :
+                    eCount++;
+                    break;
+                case 'i' :
+                    iCount++;
+                    break;
+                case 'o' :
+                    oCount++;
+                    break;
+                case 'u' :
+                    uCount++;
+                    break;
+                case 'b' :
+                case 'c' :
+                case 'd' :
+                case 'f' :
+                case 'g' :
+                case 'h' :
+                case 'j' :
+                case 'k' :
+                case 'l' :
+                case 'm' :
+                case 'n' :
+                case 'p' :
+                case 'q' :
+                case 'r' :
+                case 's' :
+                case 't' :
+                case 'v' :
+                case 'w' :
+                case 'x' :
+                case 'y' :
+                case 'z' :
+                    consonantCount++;
+                    break;
+                case ' ' :
+                    spacesCount++;
+                    break;
+                default :
+                    otherCharacterCount++;
+                    break;
             }
         }
 
