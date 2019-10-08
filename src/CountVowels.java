@@ -38,7 +38,7 @@ public class CountVowels {
         int otherCharacterCount = 0; // Create a counter for other characters
 
         // Create a loop that strips off one character at a time
-        for (int i = 0; i >= userPhraseLength; i++) {
+        for (int i = 0; i <= userPhraseLength; i++) {
             if (userPhrase.charAt(i) == 'a') { // Inside the loop, check each character to see if it is a vowel, consonant, space, or other character and increment the appropriate counter
                 aCount++;
             } else if (userPhrase.charAt(i) == 'e') {
@@ -93,7 +93,55 @@ public class CountVowels {
                 consonantCount++;
             } else if (userPhrase.charAt(i) == ' ') {
                 spacesCount++;
-            } else {
+            } else if (userPhrase.charAt(i) == '!') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '@') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '#') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '$') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '%') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '^') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '&') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '*') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '(') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == ')') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '-') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '+') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '=') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '[') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == ']') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '{') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '}') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '\\') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '|') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == ',') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '.') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '/') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '<') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '>') {
+                otherCharacterCount++;
+            } else if (userPhrase.charAt(i) == '?') {
                 otherCharacterCount++;
             }
         }
