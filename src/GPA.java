@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class GPA {
     /*
      * Write an application to calculate the Grade Point Average (GPA) of a student.
@@ -16,20 +18,65 @@ public class GPA {
      * Have you ever calculated a zero or intercept and seen x = 3 represented as x = 2.9999998? Same concept.
      */
 
+    private static final String SENTINEL = "Q";
+
     /**
      * Calculates the GPA of one grade into its
      * numerical equivalent
      * @param grade the grade
      * @return the GPA
      */
-    /*private static double getGPA(String grade) {
-
-    }*/
+    private static double getGPA(String grade) {
+        // TODO Calculate the student's Grade Point Average (GPA) and convert it to a numerical values
+    }
 
     public static void main(String[] args) {
-        // TODO Calculate the student's Grade Point Average (GPA) and convert it to a numerical values
         // TODO Use a loop to enter grades until sentinel "Q"
+        String userInput = "";
+
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter a grade or Q to quit: ");
+
+        if (userInput == SENTINEL) {
+            System.exit(1);
+        } else {userInput = input.next();}
+
         // TODO Use a switch statement to determine the GPA
-        // TODO Print "Invalid Grade" for an invalid grade
+        switch (userInput) {
+            case "A+" :
+                break;
+            case "A" :
+                break;
+            case "A-" :
+                break;
+            case "B+" :
+                break;
+            case "B" :
+                break;
+            case "B-" :
+                break;
+            case "C+" :
+                break;
+            case "C" :
+                break;
+            case "C-" :
+                break;
+            case "D+" :
+                break;
+            case "D" :
+                break;
+            case "D-" :
+                break;
+            case "F+" :
+                break;
+            case "F" :
+                break;
+            case "F-" :
+                break;
+            default : // Print "Invalid Grade" for an invalid grade
+                System.out.println("Invalid grade.");
+                break;
+
+        }
     }
 }
