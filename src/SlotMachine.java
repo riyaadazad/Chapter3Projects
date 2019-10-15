@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class SlotMachine {
     /*
      * Design and implement an application that simulates a simple slot machine in which three numbers between 0 and 9 are randomly selected and printed side by side (with a tab between them).
@@ -43,18 +45,28 @@ public class SlotMachine {
     public static void main(String[] args) {
         double playerMoney = TOTAL;
 
-        // TODO RUN THIS IN A LOOP
+        if (playerMoney == 0.0) { // Program terminates IF user runs out of money
+            System.out.println("Oh well, you're bankrupt and out of money. Game over.");
+            System.exit(1);
+        } else if (playerMoney != 0.0) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter 'P' to pull/play, or 'Q' to quit. What would you like to do?");
+            String userInput = input.next();
 
-            // TODO Program terminates IF user runs out of money
+            userInput = userInput.toUpperCase(); // Extra check to ensure the user entered an uppercase letter flag
 
-            // TODO Program terminates IF user quits with a 'Q'
+            if (userInput == "Q") { // Program terminates IF user quits with a 'Q'
+                System.out.println("Oh well, sorry to see you go. Quitter. Game over.");
+                System.exit(1);
+            } else if (userInput == "P") { // TODO IF user "pulls" with a 'P' then generate 3 random numbers between 0 and 9 (print them side-by-side with a tab)
+                System.out.println("Pulling... Loading... Please wait...");
+            }
+        }
 
-            // TODO IF user "pulls" with a 'P' then generate 3 random numbers between 0 and 9 (print them side-by-side with a tab)
+        // TODO IF all 3 numbers are the same, print a message and award the user $5 (THREE_IN_A_ROW)
 
-            // TODO IF all 3 numbers are the same, print a message and award the user $5 (THREE_IN_A_ROW)
+        // TODO IF 2 numbers are the same, print a message and award the user $2 (TWO_IN_A_ROW)
 
-            // TODO IF 2 numbers are the same, print a message and award the user $2 (TWO_IN_A_ROW)
-
-            // TODO At the end of the round, print the amount of money remaining
+        // TODO At the end of the round, print the amount of money remaining
     }
 }
