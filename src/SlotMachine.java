@@ -34,9 +34,27 @@ public class SlotMachine {
      * Only use break statements when using switch statements.
      */
 
-    static final double TOTAL = 20.00;
+    // "Use constants wherever possible"
+    static final double TOTAL = 20.00; // The money that every player starts out with
+    static final double COST = 0.50; // The money that is subtracted each time the player plays
+    static final double THREE_IN_A_ROW = 5.00; // The money that is awarded to the player for a three-in-a-row (JACKPOT!)
+    static final double TWO_IN_A_ROW = 2.00; // The money that is awarded to the player for a two-in-a-row (WINNER!)
 
     public static void main(String[] args) {
+        double playerMoney = TOTAL;
 
+        // TODO RUN THIS IN A LOOP
+
+            // TODO Program terminates IF user runs out of money
+
+            // TODO Program terminates IF user quits with a 'Q'
+
+            // TODO IF user "pulls" with a 'P' then generate 3 random numbers between 0 and 9 (print them side-by-side with a tab)
+
+            // TODO IF all 3 numbers are the same, print a message and award the user $5 (THREE_IN_A_ROW)
+
+            // TODO IF 2 numbers are the same, print a message and award the user $2 (TWO_IN_A_ROW)
+
+            // TODO At the end of the round, print the amount of money remaining
     }
 }
