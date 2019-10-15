@@ -1,3 +1,4 @@
+import java.util.Random;
 import java.util.Scanner;
 
 public class SlotMachine {
@@ -49,24 +50,42 @@ public class SlotMachine {
             System.out.println("Oh well, you're bankrupt and out of money. Game over.");
             System.exit(1);
         } else if (playerMoney != 0.0) {
-            Scanner input = new Scanner(System.in);
-            System.out.print("Enter 'P' to pull/play, or 'Q' to quit. What would you like to do?");
-            String userInput = input.next();
+            while (playerMoney != 0.0) {
+                Scanner input = new Scanner(System.in);
+                System.out.print("Enter 'P' to pull/play, or 'Q' to quit. What would you like to do?");
+                String userInput = input.next();
 
-            userInput = userInput.toUpperCase(); // Extra check to ensure the user entered an uppercase letter flag
+                userInput = userInput.toUpperCase(); // Extra check to ensure the user entered an uppercase letter flag
 
-            if (userInput == "Q") { // Program terminates IF user quits with a 'Q'
-                System.out.println("Oh well, sorry to see you go. Quitter. Game over.");
-                System.exit(1);
-            } else if (userInput == "P") { // TODO IF user "pulls" with a 'P' then generate 3 random numbers between 0 and 9 (print them side-by-side with a tab)
-                System.out.println("Pulling... Loading... Please wait...");
+                if (userInput == "Q") { // Program terminates IF user quits with a 'Q'
+                    System.out.println("Oh well, sorry to see you go. Quitter. Game over.");
+                    System.exit(1);
+                } else if (userInput == "P") { // IF user "pulls" with a 'P' then generate 3 random numbers between 0 and 9 (print them side-by-side with a tab)
+                    playerMoney = playerMoney - COST;
+
+                    System.out.println("Pulling... Loading... Please wait...");
+
+                    Random randomSlot = new Random();
+                    int firstNumber = randomSlot.nextInt(9);
+                    int secondNumber = randomSlot.nextInt(9);
+                    int thirdNumber = randomSlot.nextInt(9);
+
+                    System.out.println("Your slot machine says...");
+
+                    System.out.print(firstNumber + "\t" + secondNumber + "\t" + thirdNumber);
+
+                    if (firstNumber == secondNumber && secondNumber == thirdNumber) { // IF all 3 numbers are the same, print a message and award the user $5 (THREE_IN_A_ROW)
+                        playerMoney = playerMoney + THREE_IN_A_ROW;
+                        System.out.println("All three numbers are the same... JACKPOT!!! You win $5");
+                    } else if (firstNumber == secondNumber || secondNumber == thirdNumber || firstNumber == thirdNumber) { // IF 2 numbers are the same, print a message and award the user $2 (TWO_IN_A_ROW)
+                        playerMoney = playerMoney + TWO_IN_A_ROW;
+                        System.out.println("Two numbers are the same... you're a WINNER!!! You win $2");
+                    }
+
+                    // At the end of the round, print the amount of money remaining
+                    System.out.println("Money Remaining: " + "$" + playerMoney);
+                }
             }
         }
-
-        // TODO IF all 3 numbers are the same, print a message and award the user $5 (THREE_IN_A_ROW)
-
-        // TODO IF 2 numbers are the same, print a message and award the user $2 (TWO_IN_A_ROW)
-
-        // TODO At the end of the round, print the amount of money remaining
     }
 }
