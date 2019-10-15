@@ -50,7 +50,7 @@ public class SlotMachine {
             System.out.println("Oh well, you're bankrupt and out of money. Game over.");
             System.exit(1);
         } else if (playerMoney != 0.0) {
-            while (playerMoney != 0.0) {
+            while (playerMoney > 0.0) {
                 Scanner input = new Scanner(System.in);
                 System.out.print("Enter 'P' to pull/play, or 'Q' to quit. What would you like to do?");
                 String userInput = input.next();
