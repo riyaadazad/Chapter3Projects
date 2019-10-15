@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MilitaryTime {
     /*
      * Write a program that reads in an integer (representing military time) and converts it to standard time (AM or PM).
@@ -23,6 +25,17 @@ public class MilitaryTime {
      */
 
     public static void main(String[] args) {
+        int END_PROGRAM = -1; // Sentinel value
+        int userInput = 0;
 
+        while (userInput != -1) {
+            Scanner input = new Scanner(System.in);
+            System.out.print("Enter military times. Enter -1 to continue.");
+
+            if (userInput == END_PROGRAM) {
+                System.out.println("You've entered the sentinel value of -1. Program terminated.");
+                System.exit(1);
+            }
+        }
     }
 }
