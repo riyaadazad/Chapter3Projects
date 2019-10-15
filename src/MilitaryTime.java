@@ -1,3 +1,5 @@
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Scanner;
 
 public class MilitaryTime {
@@ -31,11 +33,11 @@ public class MilitaryTime {
         while (userInput != -1) {
             Scanner input = new Scanner(System.in);
             System.out.print("Enter military times. Enter -1 to continue.");
+            userInput = input.nextInt();
+            DateFormat inputDate = new SimpleDateFormat("HH:mm");
+            DateFormat outputDate = new SimpleDateFormat("hh:mm aa");
 
-            if (userInput == END_PROGRAM) {
-                System.out.println("You've entered the sentinel value of -1. Program terminated.");
-                System.exit(1);
-            }
+            System.out.println(outputDate);
         }
     }
 }
